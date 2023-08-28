@@ -7,6 +7,7 @@ const GameSchema = new Schema({
     description: {type: String, required: true},
     genre: {type: Schema.Types.objectId, ref: "Genre", required: true},
     release_date: {type: Date, default: Date.now},
+    developer: {type: Schema.Types.objectId, ref: "Developer", required: true},
     status: {
         type: String,
         required: true,
@@ -15,4 +16,7 @@ const GameSchema = new Schema({
     }
 })
 
+GameSchema.virtual("url").get(function() {
+    return `/catalog/game/${this._id}`;
+})
 module.exports = mongoose.model("Game", GameSchema);
