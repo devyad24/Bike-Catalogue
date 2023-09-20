@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each bike in bikes
+      li
+        a(href=bike.url) #{bike.model}
+        |  (#{bike.brand.name})
+        |  (#{bike.category.name})
+        |  (#{bike.mileage})
+        |  (#{bike.price})
+
+    else
+      li There are no bikes.
