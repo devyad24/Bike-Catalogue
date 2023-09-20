@@ -170,8 +170,8 @@ async function createBikeInstances() {
     bikeInstanceCreate(4, bikes[4], "84ME34898Z", "Moti Showroom", 110000),
     bikeInstanceCreate(5, bikes[5], "64ME34898Z", "Amrit Showroom", 110000),
     bikeInstanceCreate(6, bikes[6], "74ME34898Z", "Pant Showroom", 110000),
-    bikeInstanceCreate(7, bikes[7], "94ME34898Z", "Automax Showroom", 110000),
-    bikeInstanceCreate(8, bikes[8], "24ME34898Z", "Zeta Showroom", 110000),
-    bikeInstanceCreate(9, bikes[9], "44ME34898Z", "Nova Showroom", 110000),
+    bikeInstanceCreate(7, bikes[4], "94ME34898Z", "Automax Showroom", 110000),
+    bikeInstanceCreate(8, bikes[3], "24ME34898Z", "Zeta Showroom", 110000),
+    bikeInstanceCreate(9, bikes[1], "44ME34898Z", "Nova Showroom", 110000),
   ]);
 }

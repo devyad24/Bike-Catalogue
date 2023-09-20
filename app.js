@@ -4,6 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const indexRouter = require('./routes/index');
 const catalogRouter = require('./routes/catalog');
@@ -13,7 +16,7 @@ const app = express();
 
 //Setup database connection
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://devyadav4211:4211@cluster0.yhwsxkq.mongodb.net/?retryWrites=true&w=majority";
+const mongoDB = process.env.DB_URL || "mongodb://localhost:27020/Bike_catalog";
 
 main().catch((err) => console.log(err));
 async function main() {
